@@ -1,14 +1,11 @@
 '''
 Rei Thao
-This code converts MIPS assembly into machine language. It gets the intruction and checks dictionaries to see if it is either
-an I or R type encoding problem. It then checks what type of register is being called in the statement and makes the correct conversion
-based on the result. At the end, it checks what is being called again to correctly place the conversions.
-'''
+This program converts MIPS assembly into machine language. It receives a set of instructions, in MIPS assembly, and checks dictionaries to see if each instruction is an I or R type encoding problem. It then checks what type of register is being called in the statement and makes the correct conversion based on the result. Lastly, it checks what is being called again to correctly place the conversions.
 import argparse
 import re
 import sys
 
-R_Code = { #insruction
+R_Code = { #instruction
     "add" : "100000", 
     "sub" : "100010",
     "sll" : "000000",
